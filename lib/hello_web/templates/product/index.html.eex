@@ -1,0 +1,24 @@
+<h1>Listing Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>SKU</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for item <- @items do %>
+    <tr>
+      <td>
+        <img src="https://cf.shopee.vn/file/<%= item.image %>_tn">
+      </td>
+      <td><%= item.name %></td>
+      <td><%= item.sku %></td>
+      <td><%= item.price %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
